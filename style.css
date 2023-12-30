@@ -5,3 +5,10 @@ img {
 
 
 
+.container {
+    background-color: #afd1e5;
+    width: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 100px auto 0;
+}
