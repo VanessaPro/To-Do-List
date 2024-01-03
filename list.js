@@ -1,27 +1,32 @@
 const button = document.querySelector('.button-add-task')
 const input = document.querySelector('.input-task')
-const listaCompleta = document.querySelector('.list-tasks')
+const listComplet = document.querySelector('.list-tasks')
 
 let myListItens =[]
 
 function  addBewTask(){
    myListItens.push(input.value)
+
+   input.value = ''
    
+   showList()
 }
 
 function showList(){
    let newLi = ''
 
-   myListItens.forEach(task =>{
+   myListItens.forEach((task) =>{
+      newLi = newLi + ` 
+       <li class="task ">
+       <img src="./img/checked.png" alt="check-na-tarefa" onclick="concluirTarefa">
+       <p>${task}</p>
+       <img src="./img/trash.png" alt="tarefa-para-o-lixo" onclick="deletarItem">
+       </li>`
 
    })
-  // <li class="task ${item.concluida && 'done'}">
-  // <img src="./img/checked.png" alt="check-na-tarefa" onclick="concluirTarefa(${posicao})">
- //</img>  <p>${item.tarefa}</p>
-  // <img src="./img/trash.png" alt="tarefa-para-o-lixo" onclick="deletarItem(${posicao})">
-  //</li>
+ 
 
-
+listComplet.innerHTML = newLi
    
 }
 
