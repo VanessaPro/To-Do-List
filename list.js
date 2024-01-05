@@ -21,8 +21,8 @@ function showList(){
    myListItens.forEach((task, position) =>{
       newLi = newLi + ` 
        <li class="task ">
-       <img src="./img/checked.png" alt="check-na-tarefa" onclick="concluirTarefa">
-       <p>${task}</p>
+       <img src="./img/checked.png" alt="check-na-tarefa" onclick="concludeTask(${position})">
+       <p>${task.task}</p>
        <img src="./img/trash.png" alt="tarefa-para-o-lixo" onclick="deletItem(${position})">
        </li>`
 
@@ -33,7 +33,8 @@ listComplet.innerHTML = newLi
    
 }
 
-function concludeTask(){
+function concludeTask(position){
+   myListItens[position].conclude = !myListItens[position].conclude
 
 }
 
