@@ -36,6 +36,8 @@ img {
     margin: 100px auto 0;
     padding: 20px;
     border-radius: 10px;
+    
+    
 }
 
 .input-button-container {
@@ -43,6 +45,8 @@ img {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    
+    
 }
 
 .input-task {
@@ -51,7 +55,12 @@ img {
     width: calc(70% - 5px); 
     height: 40px;
     padding-left: 10px;
+    margin: auto;
+    
+    
 }
+
+
 
 .button-add-task {
     border: none;
@@ -63,13 +72,16 @@ img {
     font-size: 17px;
     cursor: pointer;
     font-weight: 700;
+    
 }
 
 
 
-.list-tasks {
-    width: 100%;
-    list-style: none;
+.list-tasks{
+   width: 100%;
+   list-style: none;
+   margin-top: 10px;
+   
 }
 
 .task {
@@ -83,10 +95,15 @@ img {
     border-radius: 5px;
     margin-bottom: 20px;
     cursor: pointer;
+    
+   
+   
+   
 }
 
 .task:hover img {
     opacity: 1;
+   
 }
 
 .done {
@@ -113,6 +130,8 @@ img {
         height: 40px;
     }
 }
+
+
 
 @media (max-width: 420px) {
     .container {
