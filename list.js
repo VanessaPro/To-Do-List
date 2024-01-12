@@ -4,16 +4,26 @@ const listComplet = document.querySelector('.list-tasks')
 
 let myListItens =[]
 
-function  addBewTask(){
-   myListItens.push({
-      task:input.value,
-      conclude:false
-   })
+function addBewTask() {
+  
+   if (input.value.trim() === '') {
+       alert('Por favor, digite uma tarefa antes de adicionar!');
+       return; 
+   }
 
-   input.value = ''
    
-   showList()
+   myListItens.push({
+       task: input.value,
+       conclude: false
+   });
+
+   
+   input.value = '';
+
+   
+   showList();
 }
+
 
 function showList(){
    let newLi = ''
