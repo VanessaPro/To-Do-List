@@ -58,4 +58,5 @@ function loadList(){
    showList()
 }
 
+loadList()
 button.addEventListener('click', addBewTask)
