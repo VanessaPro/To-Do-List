@@ -33,15 +33,22 @@ img {
 .container {
     background-color: #008B8B;
     width: 500px;
-    border-radius: 10px;
-    padding: 10px;
     margin: 100px auto 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.input-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .input-task {
     border: none;
     border-radius: 5px;
-    width: 300px;
+    width: calc(70% - 5px); 
     height: 40px;
     padding-left: 10px;
 }
@@ -50,27 +57,19 @@ img {
     border: none;
     border-radius: 5px;
     height: 40px;
+    width: calc(30% - 5px); 
     background-color: #003329;
     color: #ffffff;
     font-size: 17px;
-    padding: 0 15px;
-    float: right;
     cursor: pointer;
     font-weight: 700;
 }
 
-.button-add-task:hover {
-    opacity: 0.8;
-}
 
-.button-add-task:active {
-    opacity: 0.6;
-}
 
 .list-tasks {
     width: 100%;
     list-style: none;
-    margin-top: 30px;
 }
 
 .task {
@@ -90,7 +89,33 @@ img {
     opacity: 1;
 }
 
-.done{
+.done {
     background-color: #8fac55;
     text-decoration: line-through;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin: 50px auto 0;
+    }
+
+    .button-add-task {
+        font-size: 14px;
+    }
+
+    .list-tasks {
+        margin-top: 20px;
+    }
+
+    .task {
+        height: 40px;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        width: 95%;
+    }
 }
